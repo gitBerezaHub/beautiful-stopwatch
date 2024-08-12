@@ -1,30 +1,25 @@
+<script setup lang="ts">
+import StartScreen from "@/views/StartScreen.vue";
+</script>
+
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view />
+  <start-screen />
 </template>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+@import "styles/reset";
+
+@font-face {
+  font-family: SFPRODISPLAYREGULAR;
+  src: url("styles/sf-pro-display-font/SFPRODISPLAYREGULAR.OTF");
+  font-weight: bold;
 }
 
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+#app {
+  font-family: SFPRODISPLAYREGULAR;
+  width: 100vw;
+  height: 100%;
+  color: #fff;
+  background-color: #22343c;
 }
 </style>
