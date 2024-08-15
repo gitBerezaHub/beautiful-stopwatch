@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import BackgroundCell from "@/components/BackgroundCell.vue";
+import router from "@/router";
 </script>
 
 <template>
   <div class="cell-grid">
-    <div class="backgrounds-cell" v-for="index in 9" :key="index">
-      <background-cell />
+    <div class="background-cell" v-for="index in 9" :key="index">
+      <background-cell @click="router.push('/stopwatch')" />
     </div>
   </div>
 </template>
@@ -19,7 +20,7 @@ import BackgroundCell from "@/components/BackgroundCell.vue";
   justify-content: center;
 }
 
-.backgrounds-cell {
+.background-cell {
   display: flex;
   justify-content: center;
   grid-row-end: span 10;
@@ -28,7 +29,7 @@ import BackgroundCell from "@/components/BackgroundCell.vue";
   z-index: 0;
 }
 
-.backgrounds-cell:before {
+.background-cell:before {
   content: "";
   background: #286053;
   position: absolute;
@@ -43,15 +44,15 @@ import BackgroundCell from "@/components/BackgroundCell.vue";
   border-radius: 25px;
 }
 
-.backgrounds-cell:active:after {
+.background-cell:active:after {
   background: transparent;
 }
 
-.backgrounds-cell:hover:before {
+.background-cell:hover:before {
   opacity: 1;
 }
 
-.backgrounds-cell:after {
+.background-cell:after {
   z-index: -1;
   content: "";
   position: absolute;

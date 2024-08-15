@@ -18,6 +18,7 @@
 
 <style scoped lang="scss">
 .cell {
+  z-index: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,6 +47,7 @@
 }
 
 .likes {
+  z-index: 1;
   width: 30%;
   display: flex;
   flex-direction: row;

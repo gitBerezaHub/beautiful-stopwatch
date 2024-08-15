@@ -1,9 +1,7 @@
-<script setup lang="ts">
-import StartScreen from "@/views/StartScreen.vue";
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <start-screen />
+  <router-view />
 </template>
 
 <style lang="scss">
